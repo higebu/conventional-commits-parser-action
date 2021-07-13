@@ -1,0 +1,17 @@
+name: 'conventional-commits-parser-action'
+description: 'parse commit and set outputs based on conventional commits'
+author: 'Yuya Kusakabe'
+outputs:
+  commit_parsed:
+    description: '`true` if the commit was parsed, `false` otherwise'
+  type:
+    description: 'The commit type'
+  scope:
+    description: 'The commit scope'
+  breaking_change:
+    description: '`true` if the commit is breaking change, `false` otherwise'
+  text:
+    description: 'The commit text'
+runs:
+  using: 'node14'
+  main: 'dist/index.js'
