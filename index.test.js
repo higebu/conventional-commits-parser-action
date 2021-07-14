@@ -12,6 +12,18 @@ describe('conventional-commits-parser-action', () => {
     }
   })
 
+  test('actual commit', async () => {
+    process.env.GITHUB_SHA = '954605fe1b7b786fa5364abde7447f7ce4a258a6'
+    const action = require('.')
+    const expected = {
+      commit_parsed: true,
+      type: 'init',
+      text: 'initial commit'
+    }
+    await action.main()
+    expect(output).toEqual(expected)
+  })
+
   test('commit message with no scope', async () => {
     git.readCommit = () => {
       return { commit: { message: 'fix: a really weird bug' } }
