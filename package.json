@@ -1,6 +1,6 @@
 {
   "name": "conventional-commits-parser-action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,9 @@
     "unist-util-visit": "^2.0.3"
   },
   "standard": {
-    "env": [ "jest" ],
+    "env": [
+      "jest"
+    ],
     "ignore": "dist/"
   }
 }
