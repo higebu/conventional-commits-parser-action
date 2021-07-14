@@ -16,7 +16,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: higebu/conventional-commits-action@v1
+      - uses: higebu/conventional-commits-parser-action@v1
         id: parser
       - run: |
           echo 'this step will be run if the commit type is `fix`'
