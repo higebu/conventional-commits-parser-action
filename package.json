@@ -17,7 +17,7 @@
   "license": "ISC",
   "devDependencies": {
     "@zeit/ncc": "0.22.3",
-    "jest": "27.0.6",
+    "jest": "27.5.1",
     "standard": "16.0.4"
   },
   "dependencies": {
